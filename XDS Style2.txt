@@ -1,0 +1,67 @@
+XSD Style-2 format
+============================================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:element name="book-store">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="book">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="bookCode" type="xs:string"/>
+							<xs:element name="price" type="xs:int"/>
+							<xs:element name="quantity" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="author">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string"/>
+							<xs:element name="email" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				
+				<xs:element name="established-year">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="addr" type="xs:string"/>
+							<xs:element name="year" type="xs:int"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
+
+===================================================================================================
+
+XML file
+=================================================
+
+<?xml version="1.0" encoding="UTF-8"?>
+<book-store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///D:/Java%20Package/WebServices/XSD/book-store-style2.xsd">
+
+	<book>
+		<bookCode>IC001</bookCode>
+		<price>500</price>
+		<quantity>5</quantity>
+	</book>
+	
+	<author>
+		<name>Devaj</name>
+		<email>devaj04@gmail.com</email>
+	</author>
+	
+	<established-year>
+		<addr>S R Nagar</addr>
+		<year>2005</year>
+	</established-year>
+	
+</book-store>
